@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/relay-us/lay/blob/main/schema/error.schema.json",
+  "title": "Error",
+  "description": "The general error schema for server responses",
+  "type": "object",
+  "properties": {
+    "code": {
+      "description": "The Lay error code",
+      "type": "string"
+    },
+    "message": {
+      "description": "User-friendly error message for the client",
+      "type": "string"
+    },
+    "details": {
+      "description": "Optional additional information (generally for debug purposes)",
+      "type": "object"
+    }
+  },
+  "required": ["code", "message"]
+}

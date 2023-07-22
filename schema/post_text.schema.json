@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/relay-us/lay/blob/main/schema/post_text.schema.json",
+  "title": "Post Text",
+  "description": "Post a Lay text message",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "description": "Client public key",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "Millisecond timestamp of request since UNIX epoch",
+      "type": "number"
+    },
+    "channelId": {
+      "description": "Channel public key",
+      "type": "string"
+    },
+    "content": {
+      "description": "Text content",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Additional optional metadata for the message",
+      "type": "object"
+    },
+    "signature": {
+      "description": "Signature of all previous data as minified JSON string",
+      "type": "string"
+    }
+  },
+  "required": ["userId", "timestamp", "channelId", "content", "signature"]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/relay-us/lay/blob/main/schema/get_text.schema.json",
+  "title": "Get Text",
+  "description": "Get Lay text message(s)",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "description": "Client public key",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "Millisecond timestamp of request since UNIX epoch",
+      "type": "number"
+    },
+    "channelId": {
+      "description": "Channel public key",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Additional optional metadata for the message",
+      "type": "object"
+    },
+    "signature": {
+      "description": "Signature of all previous data as minified JSON string",
+      "type": "string"
+    }
+  },
+  "required": ["userId", "timestamp", "channelId", "signature"]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/relay-us/lay/blob/main/schema/get_profile.schema.json",
+  "title": "Get Profile",
+  "description": "Get a Lay profile",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "description": "Client public key",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "Millisecond timestamp of request since UNIX epoch",
+      "type": "number"
+    },
+    "target": {
+      "description": "Target public key",
+      "type": "string"
+    },
+    "signature": {
+      "description": "Signature of all previous data as minified JSON string",
+      "type": "string"
+    }
+  },
+  "required": ["userId", "timestamp", "target", "signature"]
+}
