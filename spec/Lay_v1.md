@@ -21,7 +21,7 @@ Lay uses the following HTTP response codes:
 The server must reply with one of these HTTP codes for every client request. The server must also provide information about errors if they arise from a client's request.
 The response JSON must contain a Lay error code (string, case sensitive) and a user-friendly message.
 
-Lay have several universal error codes. Each standard Lay route also has its own error codes associated with it.
+Lay has several universal error codes. Each standard Lay route also has its own error codes associated with it.
 
 Univeral Error Codes:
  - LIMIT_REQUEST - *the request was too large*
